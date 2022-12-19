@@ -1,0 +1,19 @@
+<h1>We found <%= @foods.count %> foods containing <%= @searched_food %></h1>
+
+<% @foods.each do |food| %>
+  <section class="food">
+    <p class="upc">
+    UPC Code: <%= food.upc %>
+    </p>
+    <p class="description">
+    Description: <%= food.description %>
+    </p>
+    <p class="brand">
+    Brand: <%= food.brand %>
+    </p>
+    <p class="ingredients">
+    Ingredients: <%= food.ingredients %>
+    </p>
+    __________________________________________
+  </section>
+<% end %>
